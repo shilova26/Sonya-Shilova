@@ -1,0 +1,29 @@
+﻿@model IEnumerable<coffeehouse.Models.Card>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <td class="header"><p>Id:    </p></td>
+            <td class="header"><p>Название:    </p></td>
+            <td class="header"><p>Описание:    </p></td>
+            <td class="header"><p>Цена:    </p></td>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (coffeehouse.Models.Card f in Model)
+        {
+            <tr class="content">
+                <td><p>@f.Id</p></td>
+                <td><p>@f.Name</p></td>
+                <td><p>@f.Description</p></td>
+                <td><p>@f.Price</p></td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
